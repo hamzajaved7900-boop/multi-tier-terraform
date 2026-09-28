@@ -7,6 +7,8 @@ resource "aws_db_subnet_group" "db_subnet" {
 
 # RDS MySQL Free-tier compatible Instance
 resource "aws_db_instance" "mysql" {
+  identifier             = "multitier-mysql-database"
+  apply_immediately      = true
   allocated_storage      = 20
   max_allocated_storage  = 50
   engine                 = "mysql"
